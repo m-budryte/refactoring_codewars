@@ -1,13 +1,13 @@
+VOWELS = ["a", "e", "i", "o", "u"]
+
 def getCount(inputStr)
-  vowel = 0
-  i = 0
-  while i < inputStr.length
-    if (inputStr[i] == "a" || inputStr[i] == "e" || inputStr[i] == "i" || inputStr[i] == "o" || inputStr[i] == "u")
-      vowel += 1
-    end
-  i += 1
+  counter = 0
+  
+  inputStr.chars.each do |letter|
+    counter += 1 if VOWELS.include? (letter)
   end
-  return vowel
+
+  counter
 end
 
 # Return the number (count) of vowels in the given string.

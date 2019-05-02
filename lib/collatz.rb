@@ -1,17 +1,14 @@
+def update_num(n)
+  n.even? ? n /= 2 : n = 3*n + 1
+end
+
 def collatz(n)
-new_string = "#{n}"
-   num = n
-   p num
-   while num > 1 do
-      if num.even?
-         num /= 2
-         new_string += "->#{num.to_s}"
-      else
-         num = 3*num + 1
-         new_string += "->#{num.to_s}"
-      end
-   end
-   p new_string
+  string = "#{n}"
+    while n > 1 do
+     n = update_num(n)
+     string += "->#{n.to_s}"
+    end
+  string
 end
 
 # Print the collatz sequence starting with positive integer n.

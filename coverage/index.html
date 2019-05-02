@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-05-02T12:51:08+01:00">2019-05-02T12:51:08+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-05-02T14:14:36+01:00">2019-05-02T14:14:36+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.9
+         2.5
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>6</b> files in total.
-    <b>47</b> relevant lines. 
-    <span class="green"><b>47</b> lines covered</span> and
+    <b>41</b> relevant lines. 
+    <span class="green"><b>41</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -53,31 +53,31 @@
       <tr>
         <td class="strong"><a href="#35b99fa04c7b579844c607b5a9286c30ec8eafb0" class="src_link" title="lib/collatz.rb">lib/collatz.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>19</td>
-        <td>11</td>
-        <td>11</td>
+        <td>16</td>
+        <td>8</td>
+        <td>8</td>
         <td>0</td>
-        <td>3.5</td>
+        <td>4.4</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#6cdc5be8f064909c8c45778041387b7f0ce6821d" class="src_link" title="lib/set_alarm.rb">lib/set_alarm.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>10</td>
-        <td>4</td>
-        <td>4</td>
+        <td>7</td>
+        <td>2</td>
+        <td>2</td>
         <td>0</td>
-        <td>2.3</td>
+        <td>3.0</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#6ee7bdc1727080c63bb1f419cc570e01c9d82914" class="src_link" title="lib/vowel_count.rb">lib/vowel_count.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>15</td>
-        <td>8</td>
-        <td>8</td>
+        <td>24</td>
+        <td>7</td>
+        <td>7</td>
         <td>0</td>
-        <td>8.1</td>
+        <td>5.3</td>
       </tr>
       
       <tr>
@@ -131,8 +131,8 @@
     <h3>lib/collatz.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>11</b> relevant lines. 
-      <span class="green"><b>11</b> lines covered</span> and
+      <b>8</b> relevant lines. 
+      <span class="green"><b>8</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -143,112 +143,94 @@
         <li class="covered" data-hits="1" data-linenumber="1">
           <span class="hits">1</span>
           
-          <code class="ruby">def collatz(n)</code>
+          <code class="ruby">def update_num(n)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="2">
-          <span class="hits">2</span>
-          
-          <code class="ruby">new_string = &quot;#{n}&quot;</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="3">
-          <span class="hits">2</span>
-          
-          <code class="ruby">   num = n</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="4">
-          <span class="hits">2</span>
-          
-          <code class="ruby">   p num</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="5">
-          <span class="hits">2</span>
-          
-          <code class="ruby">   while num &gt; 1 do</code>
-        </li>
-      
-        <li class="covered" data-hits="9" data-linenumber="6">
+        <li class="covered" data-hits="9" data-linenumber="2">
           <span class="hits">9</span>
           
-          <code class="ruby">      if num.even?</code>
+          <code class="ruby">  n.even? ? n /= 2 : n = 3*n + 1</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="7">
-          <span class="hits">7</span>
-          
-          <code class="ruby">         num /= 2</code>
-        </li>
-      
-        <li class="covered" data-hits="7" data-linenumber="8">
-          <span class="hits">7</span>
-          
-          <code class="ruby">         new_string += &quot;-&gt;#{num.to_s}&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="9">
-          
-          
-          <code class="ruby">      else</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="10">
-          <span class="hits">2</span>
-          
-          <code class="ruby">         num = 3*num + 1</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="11">
-          <span class="hits">2</span>
-          
-          <code class="ruby">         new_string += &quot;-&gt;#{num.to_s}&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="12">
-          
-          
-          <code class="ruby">      end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="13">
-          
-          
-          <code class="ruby">   end</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="14">
-          <span class="hits">2</span>
-          
-          <code class="ruby">   p new_string</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="3">
           
           
           <code class="ruby">end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="never" data-hits="" data-linenumber="4">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">def collatz(n)</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="6">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  string = &quot;#{n}&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="7">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    while n &gt; 1 do</code>
+        </li>
+      
+        <li class="covered" data-hits="9" data-linenumber="8">
+          <span class="hits">9</span>
+          
+          <code class="ruby">     n = update_num(n)</code>
+        </li>
+      
+        <li class="covered" data-hits="9" data-linenumber="9">
+          <span class="hits">9</span>
+          
+          <code class="ruby">     string += &quot;-&gt;#{n.to_s}&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="11">
+          <span class="hits">2</span>
+          
+          <code class="ruby">  string</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby"># Print the collatz sequence starting with positive integer n.</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby"># Ex: collatz(4) should return &quot;4-&gt;2-&gt;1&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="19">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby"># https://www.codewars.com/kata/5286b2e162056fd0cb000c20</code>
@@ -264,8 +246,8 @@
     <h3>lib/set_alarm.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>4</b> relevant lines. 
-      <span class="green"><b>4</b> lines covered</span> and
+      <b>2</b> relevant lines. 
+      <span class="green"><b>2</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -279,58 +261,40 @@
           <code class="ruby">def set_alarm(employed, vacation)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="2">
-          
-          
-          <code class="ruby">  # Your code here</code>
-        </li>
-      
-        <li class="covered" data-hits="5" data-linenumber="3">
+        <li class="covered" data-hits="5" data-linenumber="2">
           <span class="hits">5</span>
           
-          <code class="ruby">    return false if !employed</code>
+          <code class="ruby">    employed &amp;&amp; !vacation ? true : false</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="4">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    return false if vacation &amp;&amp; employed</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="5">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    true</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="never" data-hits="" data-linenumber="3">
           
           
           <code class="ruby">end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="never" data-hits="" data-linenumber="4">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="8">
+        <li class="never" data-hits="" data-linenumber="5">
           
           
           <code class="ruby"># Write a function named setAlarm which receives two parameters. The first parameter, employed, is true whenever you are employed and the second parameter, vacation is true whenever you are on vacation.</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="never" data-hits="" data-linenumber="6">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="never" data-hits="" data-linenumber="7">
           
           
-          <code class="ruby"># The function should return true if you are employed and not on vacation (because these are the circumstances under which you need to set an alarm). It should return false otherwise. </code>
+          <code class="ruby"># The function should return true if you are employed and not on vacation (because these are the circumstances under which you need to set an alarm). It should return false otherwise.</code>
         </li>
       
     </ol>
@@ -343,8 +307,8 @@
     <h3>lib/vowel_count.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>8</b> relevant lines. 
-      <span class="green"><b>8</b> lines covered</span> and
+      <b>7</b> relevant lines. 
+      <span class="green"><b>7</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -355,49 +319,49 @@
         <li class="covered" data-hits="1" data-linenumber="1">
           <span class="hits">1</span>
           
+          <code class="ruby">VOWELS = [&quot;a&quot;, &quot;e&quot;, &quot;i&quot;, &quot;o&quot;, &quot;u&quot;]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
           <code class="ruby">def getCount(inputStr)</code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="2">
-          <span class="hits">3</span>
-          
-          <code class="ruby">  vowel = 0</code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="3">
-          <span class="hits">3</span>
-          
-          <code class="ruby">  i = 0</code>
         </li>
       
         <li class="covered" data-hits="3" data-linenumber="4">
           <span class="hits">3</span>
           
-          <code class="ruby">  while i &lt; inputStr.length</code>
+          <code class="ruby">  counter = 0</code>
         </li>
       
-        <li class="covered" data-hits="23" data-linenumber="5">
-          <span class="hits">23</span>
+        <li class="covered" data-hits="3" data-linenumber="5">
+          <span class="hits">3</span>
           
-          <code class="ruby">    if (inputStr[i] == &quot;a&quot; || inputStr[i] == &quot;e&quot; || inputStr[i] == &quot;i&quot; || inputStr[i] == &quot;o&quot; || inputStr[i] == &quot;u&quot;)</code>
+          <code class="ruby">  i = 0</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="6">
-          <span class="hits">6</span>
+        <li class="never" data-hits="" data-linenumber="6">
           
-          <code class="ruby">      vowel += 1</code>
+          
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="covered" data-hits="3" data-linenumber="7">
+          <span class="hits">3</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">  inputStr.chars.each do |letter|</code>
         </li>
       
         <li class="covered" data-hits="23" data-linenumber="8">
           <span class="hits">23</span>
           
-          <code class="ruby">  i += 1</code>
+          <code class="ruby">    counter += 1 if VOWELS.include? (letter)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
@@ -406,37 +370,91 @@
           <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="10">
-          <span class="hits">3</span>
-          
-          <code class="ruby">  return vowel</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="11">
-          
-          
-          <code class="ruby">end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby"></code>
         </li>
       
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">  # while i &lt; inputStr.length</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">  #   if (VOWELS.include? (inputStr[i]))</code>
+        </li>
+      
         <li class="never" data-hits="" data-linenumber="13">
           
           
-          <code class="ruby"># Return the number (count) of vowels in the given string.</code>
+          <code class="ruby">  #     counter += 1</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
           
           
-          <code class="ruby"># We will consider a, e, i, o, and u as vowels for this Kata.</code>
+          <code class="ruby">  #   end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">  # i += 1</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby">  # end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="19">
+          <span class="hits">3</span>
+          
+          <code class="ruby">  counter</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby"># Return the number (count) of vowels in the given string.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby"># We will consider a, e, i, o, and u as vowels for this Kata.</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby"># The input string will only consist of lower case letters and/or spaces.</code>
