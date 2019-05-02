@@ -1,2 +1,4 @@
-# refactoring_codewars
-I am using my old codewars solutions and refactor them to look nicer
+# Refactoring Codewars solutions
+
+I am using my old codewars solutions and refactor them. 
+
